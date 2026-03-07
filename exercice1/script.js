@@ -1,8 +1,9 @@
+var color = prompt("choisir votre couleur (green , blue , red)")
 var img = document.querySelectorAll("img")
 var btn = document.querySelector("button")
 
 btn.addEventListener("click" , function () {
-    var color = prompt("choisir votre couleur (green , blue , red)")
+    
     if (color === "green") {
     document.body.style.backgroundColor = "green"
 } else if (color === "blue") {
@@ -11,15 +12,14 @@ btn.addEventListener("click" , function () {
 else if (color === "red") {
     document.body.style.backgroundColor = "red"
 } 
-
 })
 
 // while (true) {
 //     if (color === "green" || color === "blue" || color === "red" ) {
-//         document.body.style.backgroundColor = color
+//         
 //         break 
 //     }
-//     else if (color === "") {
+//      (color === "") {
 //         alert("Invalid input. Please type green, blue, or red")
 //     }
 // }
