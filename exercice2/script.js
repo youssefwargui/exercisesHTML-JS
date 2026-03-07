@@ -1,5 +1,10 @@
 var lis= document.querySelectorAll("li")
 var ol = document.querySelector("ol")
+var input = document.querySelector("input");
+var button = document.querySelector("button");
+var div = document.querySelector("div");
+var h1 = document.querySelector("h1")
+
 
 var todos = [{
   id: 1,
@@ -22,24 +27,15 @@ var todos = [{
 }]
 
 
-var input = document.createElement("input");
-input.placeholder = "type task";
-input.type = "text"
 
-var button = document.createElement("button");
-button.textContent = "add"
 
-var div = document.createElement("div");
-div.append(input, button);
-document.body.append(div)
-
-var textvalidation = document.createElement("p")
-textvalidation.textContent = "you need to fill input"
-textvalidation.style.color = "red"
+var validtask = document.createElement("p")
+validtask.textContent = "you need to add task"
+validtask.style.color = "red"
 
 button.addEventListener("click", function () {
  if (input.value === "") {
-  div.append(textvalidation)
+  div.append(validtask)
     return 
  }
   var newli = document.createElement("li");
@@ -48,16 +44,40 @@ button.addEventListener("click", function () {
   input.value = ""
 })
 
-// ol.addEventListener("click" , function (task) {
-//     task.target.remove()
-// })
+
+todos.forEach(function () {
+  var counter = 3
+  var newTask = {
+        id: counter,
+        value: input.value,
+        date: new Date(),
+        completed: false
+    }
+    todos.push(newTask);
+    counter++;
+    console.log(todos)
+})
+
+ol.addEventListener("dblclick" , function (task) {
+    task.target.remove()
+})
 
 
 ol.addEventListener("click" , function (task) {
     if (task.target.value) {
         console.log(true);
     }
-    document.ol.style.text-decoration = "line-through"
+    task.target.textdecoration = "line-through"
+    task.target.style.opacity= "0.6"
 })
+
+function compteur() {
+  var counter = 0
+  if (task.target.remove() || ol.append(newli)) {
+   h1.textContent =  counter++
+  }
+  console.log(h1);
+}
+
 
 
