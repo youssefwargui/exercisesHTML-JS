@@ -41,6 +41,8 @@ button.addEventListener("click", function () {
   var newli = document.createElement("li");
   newli.textContent = input.value;
   ol.append(newli);
+  JSON.parse(localStorage.getItem("todos"))
+  localStorage.getItem("todos" , JSON.stringify(todos))
   input.value = ""
 })
 
