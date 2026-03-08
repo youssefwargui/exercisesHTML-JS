@@ -79,5 +79,31 @@ function compteur() {
   console.log(h1);
 }
 
+localStorage.setItem("todos",JSON.stringify([{
+  id: 1,
+  value: "Apprendre JS",
+  date: "2026-03-02",
+  completed: false
+}
+,
+{
+  id: 2,
+  value: "Apprendre HTML",
+  date: "2026-05-02",
+  completed: false
+},
+{ 
+    id: 3,
+  value: "Apprendre CSS",
+  date: "2026-07-02",
+  completed: false
+}]))
+
+
+
+JSON.parse(localStorage.getItem("todos"))
+
+
+
 
 
